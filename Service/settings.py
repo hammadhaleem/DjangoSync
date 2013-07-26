@@ -7,7 +7,7 @@ ADMINS = (
     ('Admin', 'admin@gigaddict.com'),
 )
 
-SITE_ROOT ="/home/engineer/django/Service/"
+SITE_ROOT ="/home/engineer/django/DjangoSync/"
 MANAGERS = ADMINS
 
 DATABASES = {
