@@ -4,8 +4,7 @@ from django.db import models
 '''
 threads					
 	Sno					auto increment
-	message 			text 		
-	item				varchar 200		
+	message 			text 			
 	item_id				varchar 200		
 	visible_id			int 		
 	timestamp			time		
