@@ -12,9 +12,9 @@ class item(models.Model):
     tags  			=models.CharField(max_length=400)
     photo			=models.CharField(max_length=200)
     video 			=models.CharField(max_length=200)
-    time_to_deliver =models.Int() #In days 
-  	cost 			=models.Float() #In Rupees 
-  	category_id 	=models.Int()
+    time_to_deliver		=models.Int() #In days 
+    cost 			=models.Float() #In Rupees 
+    category_id 	=models.Int()
 
     def __unicode__(self):
         return self.slug
