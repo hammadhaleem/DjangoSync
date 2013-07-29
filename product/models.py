@@ -8,12 +8,13 @@ class item(models.Model):
     slug   			=models.CharField(max_length=200)
     text   			=models.TextField()
     created_by  	=models.CharField(max_length=200)
-    date_added    	=models.DateTimeField('date published')
+    timestamp    	=models.DateTimeField('date published')
     tags  			=models.CharField(max_length=400)
     photo			=models.CharField(max_length=200)
     video 			=models.CharField(max_length=200)
     time_to_deliver =models.Int() #In days 
   	cost 			=models.Float() #In Rupees 
+
     def __unicode__(self):
         return self.slug
 
