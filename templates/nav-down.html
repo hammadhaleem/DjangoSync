@@ -14,7 +14,7 @@
           })
       } else {
           $('#access').removeAttr('style');
-          $('#body').removeAttr('style');
+          $('#container').removeAttr('style');
       }
      };
 
@@ -25,14 +25,12 @@
 
     </script>
     <div class='row' id  ='access'>
-    <center>
     	 <div class="span12">
-			    <form method="get" action="/" class="form-inline" >
+			    <form  action="/" class="form-inline" >
 			      <input name="q" class="span5" type="text"  placeholder="Keywords: Ruby, Rails, Django" >
 			      <input name="loc" class="span5" type="text"  placeholder="Location: City, State, Zip">
 			      <button type="submit" class="btn btn-primary"> <i class="icon-search icon-white"></i></button>
 			    </form>
   		</div>
-  	</center>
     </div>
 
