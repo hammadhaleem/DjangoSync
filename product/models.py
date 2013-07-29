@@ -12,7 +12,7 @@ class item(models.Model):
     photo=models.CharField(max_length=200)
     video=models.CharField(max_length=200)
     time_to_deliver=models.IntegerField(default=1) #In days 
-    cost=models.Float() #In Rupees 
+    cost=models.IntegerField(default=1) #In Rupees 
     category_id=models.IntegerField(default=0)
 
     def __unicode__(self):
