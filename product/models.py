@@ -11,7 +11,7 @@ class item(models.Model):
     tags=models.CharField(max_length=400)
     photo=models.CharField(max_length=200)
     video=models.CharField(max_length=200)
-    time_to_deliver=models.Int() #In days 
+    time_to_deliver=models.IntegerField(default=1) #In days 
     cost=models.Float() #In Rupees 
     category_id=models.IntegerField(default=0)
 
