@@ -13,14 +13,19 @@ threads
 	parent_id			int 	Default =0 	
 	url					text		
 					
-visible_to_users				
-	visible_id		int 		
-	userid		varchar		
+
 					
 liked_by					
 	sno		int 		
 	userid		varchar 200		
-					
+				
+
+#Later stages Phase II 
+visible_to_users				
+	visible_id		int 		
+	userid		varchar		
+
+
 report_abuse_thread 					
 	sno		int 		
 	userid		varchar 200		
