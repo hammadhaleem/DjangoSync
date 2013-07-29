@@ -26,6 +26,4 @@ class category(models.Model):
 	cat_slug=models.CharField(max_length=200)
 
 	def __unicode__(self):
-        return self.cat_slug
-
-
+		return self.cat_slug
