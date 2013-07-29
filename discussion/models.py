@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 '''
 threads					
-	Sno					auto increment
+	sno					auto increment
 	message 			text 			
 	item_id				varchar 200		
 	visible_id			int 		
@@ -29,6 +29,6 @@ report_abuse_thread
 alerts_users					
 	sno					int 		
 	isread				boolean		
-	user_id				varchar 200		
+	userid				varchar 200		
 	forum_main_sno		int 		
 '''
