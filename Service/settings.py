@@ -132,6 +132,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.admindocs',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
     'content',
     'product',
     'discussion',
