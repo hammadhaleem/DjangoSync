@@ -134,7 +134,7 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'content',
     'product',
-    'dicussiom',
+    'dicussion',
 )
 
 # A sample logging configuration. The only tangible logging
