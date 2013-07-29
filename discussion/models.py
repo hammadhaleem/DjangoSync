@@ -10,24 +10,24 @@ threads
 	timestamp			time		
 	moderation			boolean		
 	created_by_user		varchar 200		
-	parent_id			int 	Default =0 	
+	parent_id			int Default =0 	
 	url					text		
 					
 
 					
 liked_by					
-	sno		int 		
+	sno			int 		
 	userid		varchar 200		
 				
 
 #Later stages Phase II 
 visible_to_users				
 	visible_id		int 		
-	userid		varchar		
+	userid			varchar		
 
 
 report_abuse_thread 					
-	sno		int 		
+	sno			int 		
 	userid		varchar 200		
 	comment		text		
 					
