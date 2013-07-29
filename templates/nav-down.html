@@ -1,35 +1,10 @@
-	<script>
-    $(document).ready(function(){
-     function sticky() {
-      var y = $(window).scrollTop();
-      if( y > $('#branding').height() ){
-          $('#access').css({
-              'position': 'fixed',
-              'top': '0',
-              'width': $('#page').width(),
-              'box-shadow': '0px 20px 20px -15px #CCC'
-          });
-          $('#main').css({
-              'padding-top': $('#access').height()
-          })
-      } else {
-          $('#access').removeAttr('style');
-          $('#container').removeAttr('style');
-      }
-     };
 
-     $(window).scroll(sticky);
-     $(window).resize(sticky);
-    });
-
-    </script>
     
 
-    <div class='row' id  ='access'>
+    <div class='row navbar-fixed-top' id  ='access'>
     	 <div class="span12">
 			    <form  action="/" class="form-inline" >
 			      <input name="q" class="span6" type="text"  placeholder="Keywords: Ruby, Rails, Django" >
-
 			      <input name="loc" class="span5" type="text"  placeholder="Location: City, State, Zip">
 			      <button type="submit" class="btn btn-primary"> <i class="icon-search icon-white"></i></button>
 			    </form>
