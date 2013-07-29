@@ -14,6 +14,7 @@ class item(models.Model):
     video 			=models.CharField(max_length=200)
     time_to_deliver =models.Int() #In days 
   	cost 			=models.Float() #In Rupees 
+  	category_id 	=models.Int()
 
     def __unicode__(self):
         return self.slug
