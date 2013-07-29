@@ -5,9 +5,8 @@
       if( y > $('#branding').height() ){
           $('#access').css({
               'position': 'fixed',
-              'top': '70',
-              'width': $('#page').width(),
-              'box-shadow': '0px 20px 20px -15px #CCC'
+              'top': '0',
+              'width': $('#page').width()
           });
           $('#main').css({
               'padding-top': $('#access').height()
@@ -27,7 +26,8 @@
     <div class='row' id  ='access'>
     	 <div class="span12">
 			    <form  action="/" class="form-inline" >
-			      <input name="q" class="span5" type="text"  placeholder="Keywords: Ruby, Rails, Django" >
+			      <input name="q" class="span6" type="text"  placeholder="Keywords: Ruby, Rails, Django" >
+
 			      <input name="loc" class="span5" type="text"  placeholder="Location: City, State, Zip">
 			      <button type="submit" class="btn btn-primary"> <i class="icon-search icon-white"></i></button>
 			    </form>
