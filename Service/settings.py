@@ -105,7 +105,7 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'Service.urls'
 GRAPPELLI_INDEX_DASHBOARD = 'Service.dashboard.CustomIndexDashboard'
-
+ACCOUNT_ACTIVATION_DAYS = 100 
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'Service.wsgi.application'
 

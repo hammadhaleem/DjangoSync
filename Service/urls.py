@@ -18,6 +18,7 @@ urlpatterns = patterns('',
     #url(r'^item/(?P<product_slug>\w+)/$',product)
     url(r'^about/', about),
     url(r'^$', index),
+    (r'^accounts/', include('registration.backends.default.urls')),
 )
 
 
