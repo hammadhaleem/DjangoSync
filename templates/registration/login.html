@@ -11,16 +11,18 @@
 {% endif %}
 <div class="span12">
   <h2>Login </h2>
-<div class="span4">
+  <div class="span3">&nbsp;&nbsp;
+  </div>
+<div class="span6">
 
 
 <form method="post" action="?next={{ next|default:"/" }}">{% csrf_token %}
-<dl>
-<dt><label for="id_username">Username:</label>{% if form.username.errors %} <span class="error">{{ form.username.errors|join:", " }}</span>{% endif %}</dt>
+<dl
+<dt><label for="id_username"  class="span4">Username:</label>{% if form.username.errors %} <span class="error">{{ form.username.errors|join:", " }}</span>{% endif %}</dt>
 <dd>{{ form.username }}</dd>
-<dt><label for="id_password">Password:</label>{% if form.password.errors %} <span class="error">{{ form.password.errors|join:", " }}</span>{% endif %}</dt>
+<dt><label for="id_password"  class="span4">Password:</label>{% if form.password.errors %} <span class="error">{{ form.password.errors|join:", " }}</span>{% endif %}</dt>
 <dd>{{ form.password }}</dd>
-<dt><input type="submit" value="Log in" /></dt>
+<dt><input type="submit" value="Log in" class="btn btn-primary pull-right" /></dt>
 </dl>
 </form>
 </div>
