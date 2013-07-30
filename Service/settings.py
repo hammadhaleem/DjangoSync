@@ -9,8 +9,6 @@ ADMINS = (
 
 SITE_ROOT ="/home/engineer/django/DjangoSync/"
 MANAGERS = ADMINS
-EMAIL_HOST='localhost'
-EMAIL_PORT=1023
 
 DATABASES = {
     'default': {
@@ -109,8 +107,8 @@ ROOT_URLCONF = 'Service.urls'
 GRAPPELLI_INDEX_DASHBOARD = 'Service.dashboard.CustomIndexDashboard'
 ACCOUNT_ACTIVATION_DAYS = 100 
 EMAIL_PORT = 1025
-EMAIL_HOST_USER = "
-EMAIL_HOST_PASSWORD = "
+EMAIL_HOST_USER = ""
+EMAIL_HOST_PASSWORD = ""
 EMAIL_USE_TLS = False
 DEFAULT_FROM_EMAIL = 'testing@example.com'
 # Python dotted path to the WSGI application used by Django's runserver.
