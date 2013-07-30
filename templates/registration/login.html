@@ -4,11 +4,15 @@
 
 {% block content %}
 
-<h1>Log in</h1>
+<h1>Log in</h1><hr/>
 
 {% if form.errors %}
-<p class="error">Please correct the errors below:</p>
+  <h3><p class="error">Please correct the errors below:</p></h3>
 {% endif %}
+<div class="span12">
+  <h2>Login </h2>
+<div class="span4">
+
 
 <form method="post" action="?next={{ next|default:"/" }}">{% csrf_token %}
 <dl>
@@ -19,9 +23,10 @@
 <dt><input type="submit" value="Log in" /></dt>
 </dl>
 </form>
+</div>
+</div>
 {% endblock %}
 
 {% block content-related %}
-<p>If you don't have an account, you can <a href="/accounts/register/">sign
-up</a> for one.
+<p>If you don't have an account, you can <a href="/accounts/register/">sign up</a> for one.
 {% endblock %}
