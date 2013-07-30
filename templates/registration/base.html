@@ -1,16 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-    <style>
-      input.required, error {
-        border: 2px solid red;
-      }
-    </style>
-    <title>{% block title %}Tagging Exploration{% endblock %}</title>
-</head>
+
+
+{% include 'header.html' %}
+ <title>{% block title %}Tagging Exploration{% endblock %}</title>
 
 <body>
+   {% include 'nav.html' %}
+   <div class="container">
+   <div class="row">
     <div id="sidebar">
         {% block sidebar %}{% endblock %}
     </div>
@@ -19,5 +15,11 @@
         {% block content %}{% endblock %}
         {% block main_content %}{% endblock %}
     </div>
+   </div>
+  </div> <!-- /container -->
+   {% include 'footer.html' %}
 </body>
 </html>
+
+
+
