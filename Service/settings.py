@@ -9,6 +9,8 @@ ADMINS = (
 
 SITE_ROOT ="/home/engineer/django/DjangoSync/"
 MANAGERS = ADMINS
+EMAIL_HOST='localhost'
+EMAIL_PORT=1023
 
 DATABASES = {
     'default': {
