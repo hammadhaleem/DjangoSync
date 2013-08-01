@@ -13,6 +13,8 @@ def index(request):
     return render(request , 'index.html')
 
 def content(request, content_slug):
-    
     art = Article.objects.filter(slug=content_slug)
     return render(request , 'blog.html' , {'name':art[0].name , 'text':art[0].text})
+
+def inventory(request):
+	return render(request , 'inventory.html')
