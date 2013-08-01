@@ -17,7 +17,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^content/(?P<content_slug>\w+)/$',content  ),
     #url(r'^item/(?P<product_slug>\w+)/$',product)
-    url(r'^inventory/', about),
+    url(r'^inventory/',inventory),
      url(r'^about/', about),
     url(r'^$', index),
     (r'^accounts/', include('registration.backends.default.urls')),
