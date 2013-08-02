@@ -25,9 +25,9 @@ urlpatterns = patterns('',
     (r'^accounts/', include('registration.backends.default.urls')),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    
+
     url(r'^', include(user_admin_site.urls)),
-    url(r'^', include('myapp.urls')),
+    #url(r'^', include('myapp.urls')),
 )
 
 
