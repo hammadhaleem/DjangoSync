@@ -12,25 +12,7 @@
               </a>
             </div> 
 
-    {% endfor %}
-
-
-    {% for item in cat %}
-            <div class="span4">
-                <h3>{{ item.cat_name }}</h3>
-                 
-                 <p> {{ item.cat_desc  }} </p>
-          
-            </div> 
-
-    {% endfor %}
-
-
-
-
-   </div>
-
-    <div class="row">
+               <div class="row">
     <div class="span4">
       &nbsp;
     </div> 
@@ -53,6 +35,28 @@
       &nbsp;
     </div>
 
+
+
+
+    {% endfor %}
+
+
+    {% for item in cat %}
+            <div class="span4">
+                <h3>{{ item.cat_name }}</h3>
+                 
+                 <p> {{ item.cat_desc  }} </p>
+          
+            </div> 
+
+    {% endfor %}
+
+
+
+
+   </div>
+
+ 
    </div>
   </div> <!-- /container -->
    {% include 'footer.html' %}
