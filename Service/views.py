@@ -5,7 +5,7 @@ from django.contrib import auth
 from django.contrib.auth.models import User
 from django.shortcuts import render, render_to_response
 from content.models import Article
-from product.models import *
+from product.models import item , category
 
 
 def about(request):
