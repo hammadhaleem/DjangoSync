@@ -12,7 +12,8 @@ class item(models.Model):
     video=models.CharField(max_length=200)
     time_to_deliver=models.IntegerField(default=1) #In days 
     cost=models.IntegerField(default=1) #In Rupees 
-    category_id=models.IntegerField(default=0)
+    category_id=models.ForeignKey(category.id) #Key 
+    #models.IntegerField(default=0)
 
     def __unicode__(self):
         return self.slug
