@@ -3,63 +3,37 @@
    {% include 'nav.html' %}
    <div class="container">
    <div class="row">
-    {% for item in ite %}
-            <div class="col-lg-2">
-              <a href="/item/view/{{item.slug}}">
-                <h3>{{ item.name }}</h3>
-                 <img src="http://placehold.it/250x300/fbc98a/000000&text={{ item.text  }}" />
-                 <p>  </p>
-              </a>
-            </div> 
-
-    <div class="row">
-    <div class="col-lg-4">
-      &nbsp;
-    </div> 
-    <div class="col-lg-4">
-     &nbsp;
-    </div>
-    <div class="col-lg-4">
-      &nbsp;
-    </div>
-
-
-   <div class="row">
-    <div class="col-lg-4">
-      &nbsp;
-    </div> 
-    <div class="col-lg-4">
-      <a href="#" class="btn">Click Here To Load More </a>
-    </div>
-    <div class="col-lg-4">
-      &nbsp;
-    </div>
-
-
-
-
-    {% endfor %}
-
-
-    {% for item in cat %}
-            <div class="col-lg-4">
-                <h3>{{ item.cat_name }}</h3>
-                 
-                 <p> {{ item.cat_desc  }} </p>
+      <div class="span9">
+      {% if name  %}
+         <section id="">
+            
+                   <h2> {{ name }}  </h2>
           
-            </div> 
+            
+            <div class="well">
 
-    {% endfor %}
+            {% if text  %}
+                    {{ text }}
+            {% else %}
+                    <h1>Opps Are you here in error ? </h1>
+            {% endif %}
+          
+            </div>
+         </section>
 
-
-
-
-   </div>
-
- 
+       {% endif %}
+      </div>
+      <div class="span3">
+         <section id="">
+            <h2>Side Bar</h2>
+            
+          
+         </section>
+      </div>
    </div>
   </div> <!-- /container -->
    {% include 'footer.html' %}
 </body>
 </html>
+
 
