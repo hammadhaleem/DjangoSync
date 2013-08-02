@@ -3,7 +3,7 @@
    {% include 'nav.html' %}
    <div class="container">
    <div class="row">
-    {% for item in ite %}
+  {% for item in ite %}
             <div class="col-lg-2">
               <a href="/item/view/{{item.slug}}">
                 <h3>{{ item.name }}</h3>
@@ -12,33 +12,9 @@
               </a>
             </div> 
 
-    <div class="row">
-    <div class="col-lg-4">
-      &nbsp;
-    </div> 
-    <div class="col-lg-4">
-     &nbsp;
-    </div>
-    <div class="col-lg-4">
-      &nbsp;
-    </div>
+  {% endfor %}
 
 
-   <div class="row">
-    <div class="col-lg-4">
-      &nbsp;
-    </div> 
-    <div class="col-lg-4">
-      <a href="#" class="btn">Click Here To Load More </a>
-    </div>
-    <div class="col-lg-4">
-      &nbsp;
-    </div>
-
-
-
-
-    {% endfor %}
 
 
     {% for item in cat %}
