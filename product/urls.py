@@ -8,7 +8,7 @@ from product.views import *
 urlpatterns = patterns('',
     url(r'^$',ItemIndex),
     url(r'^edit/(?P<content_slug>\w+)/$',edit),
-   	url(r'^view/(?P<content_slug>\w+)/$',view),
+   	url(r'^view/(?P<content_slug>\[A-Za-z0-9-_]+)/$',view),
     url(r'^analytics',analytics),
     url(r'^create',add),
     url(r'^delete/(?P<content_slug>\w+)/$',remove),
