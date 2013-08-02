@@ -13,15 +13,16 @@ urlpatterns = patterns('',
     #url(r'^thread/(?P<thread_id>\d+)/$' , include ('discussion.urls'))
     # Uncomment the next line to enable the admin:
     
-    url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^content/(?P<content_slug>\w+)/$',content  ),
-    url(r'^inventory/',inventory),
+   
+    url(r'^$', index),    
+    url(r'^faq/',faq),    
     url(r'^about/', about),
-    url(r'^faq/',faq),
-    url(r'^$', index),
+    url(r'^inventory/',inventory),
+    url(r'^content/(?P<content_slug>\w+)/$',content  ),
     (r'^item/',include('product.urls')),
     (r'^accounts/', include('registration.backends.default.urls')),
+    url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    url(r'^admin/', include(admin.site.urls)),
 )
 
 
