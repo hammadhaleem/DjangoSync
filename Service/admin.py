@@ -1,9 +1,10 @@
 from django.contrib import admin
 from django.contrib.admin.sites import AdminSite
-from django.contrib.auth.forms import AuthenticationForm
 
  
 class UserAdminAuthenticationForm(AuthenticationForm):
+
+	from django.contrib.auth.forms import AuthenticationForm
     """
     Same as Django's AdminAuthenticationForm but allows to login
     any user who is not staff.
