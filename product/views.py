@@ -11,24 +11,22 @@ def index(request):
     return render(request , '404.html')
     
 
-def content(request, content_slug):
+def edit(request, content_slug):
     art = Article.objects.filter(slug=content_slug)
     return render(request , 'blog.html' , {'name':art[0].name , 'text':art[0].text})
 
-def content(request, content_slug):
+def view(request, content_slug):
     art = Article.objects.filter(slug=content_slug)
     return render(request , 'blog.html' , {'name':art[0].name , 'text':art[0].text})
 
-def content(request, content_slug):
+def remove(request, content_slug):
     art = Article.objects.filter(slug=content_slug)
     return render(request , 'blog.html' , {'name':art[0].name , 'text':art[0].text})
 
-def index(request):
+def analytics(request):
    return render(request , 'index.html')
     
- 
- 
-def index(request):
+def add(request):
    return render(request , 'index.html')
     
  
