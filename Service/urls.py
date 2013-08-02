@@ -16,7 +16,7 @@ urlpatterns = patterns('',
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^content/(?P<content_slug>\w+)/$',content  ),
-    url(r'^item/',product)
+    url(r'^item/',product),
     url(r'^about/', about),
     url(r'^faq/',faq),
     url(r'^$', index),
