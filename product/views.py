@@ -1,11 +1,10 @@
-
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.template import RequestContext
 from django.contrib import auth
 from django.contrib.auth.models import User
 from django.shortcuts import render, render_to_response
 from content.models import Article
-from product.views import *
+
 
 def ItemIndex(request):
     return render(request , '404.html')
