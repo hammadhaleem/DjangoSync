@@ -3,7 +3,7 @@ from django.template import RequestContext
 from django.contrib import auth
 from django.contrib.auth.models import User
 from django.shortcuts import render, render_to_response
-from product.models import item
+from product.models import *
 
 
 def ItemIndex(request):
