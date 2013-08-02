@@ -3,6 +3,9 @@ from Service.views import *
 from content.views import *
 #from product.views import *
 
+from django.contrib import admin
+admin.autodiscover()
+
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'Service.views.home', name='home'),
