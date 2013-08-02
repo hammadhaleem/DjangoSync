@@ -4,7 +4,7 @@
    <div class="container">
    <div class="row">
     {% for item in ite %}
-            <div class="span2">
+            <div class="col-lg-2">
               <a href="/item/view/{{item.slug}}">
                 <h3>{{ item.name }}</h3>
                  <img src="http://placehold.it/250x300/fbc98a/000000&text={{ item.text  }}" />
@@ -13,25 +13,25 @@
             </div> 
 
                <div class="row">
-    <div class="span4">
+    <div class="col-lg-4">
       &nbsp;
     </div> 
-    <div class="span4">
+    <div class="col-lg-4">
      &nbsp;
     </div>
-    <div class="span4">
+    <div class="col-lg-4">
       &nbsp;
     </div>
 
 
    <div class="row">
-    <div class="span4">
+    <div class="col-lg-4">
       &nbsp;
     </div> 
-    <div class="span4">
+    <div class="col-lg-4">
       <a href="#" class="btn">Click Here To Load More </a>
     </div>
-    <div class="span4">
+    <div class="col-lg-4">
       &nbsp;
     </div>
 
@@ -42,7 +42,7 @@
 
 
     {% for item in cat %}
-            <div class="span4">
+            <div class="col-lg-4">
                 <h3>{{ item.cat_name }}</h3>
                  
                  <p> {{ item.cat_desc  }} </p>
