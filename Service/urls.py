@@ -1,9 +1,9 @@
 from django.conf.urls import patterns, include, url
 from Service.views import *
 from content.views import *
-#from product.views import *
-
+from product.views import *
 from django.contrib import admin
+from Service.admin import user_admin_site
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -25,6 +25,8 @@ urlpatterns = patterns('',
     (r'^accounts/', include('registration.backends.default.urls')),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^', include(user_admin_site.urls)),
+    url(r'^', include('myapp.urls')),
 )
 
 
