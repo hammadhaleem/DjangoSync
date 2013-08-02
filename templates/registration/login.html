@@ -15,7 +15,7 @@
 <div class="span6">
 
 
-<form method="post" action="?next={{ next|default:"/" }}">{% csrf_token %}
+<form method="post" action="?next={{ next|default:"/user/" }}">{% csrf_token %}
 <dl
 <dt><label for="id_username"  class="span4">Username:</label>{% if form.username.errors %} <span class="error">{{ form.username.errors|join:", " }}</span>{% endif %}</dt>
 <dd>{{ form.username }}</dd>
