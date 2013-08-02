@@ -5,11 +5,11 @@ from django.contrib import auth
 from django.contrib.auth.models import User
 from django.shortcuts import render, render_to_response
 from content.models import Article
+from product.views import *
 
-
-def index(request):
+def ItemIndex(request):
     return render(request , '404.html')
-    
+
 def edit(request, content_slug):
     art = Article.objects.filter(slug=content_slug)
     return render(request , 'blog.html' , {'name':art[0].name , 'text':art[0].text})
