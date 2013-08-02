@@ -3,7 +3,6 @@ from django.contrib import admin
 from django.contrib.admin.sites import AdminSite
 from django.contrib.auth.forms import AuthenticationForm
 from django.utils.translation import ugettext_lazy
-from django.utils.translation import *
  
 class UserAdminAuthenticationForm(AuthenticationForm):
     """
