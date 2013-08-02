@@ -1,0 +1,65 @@
+{% include 'header.html' %}
+<body>
+   {% include 'nav.html' %}
+   <div class="container">
+   <div class="row">
+    {% for item in ite %}
+            <div class="col-lg-2">
+              <a href="/item/view/{{item.slug}}">
+                <h3>{{ item.name }}</h3>
+                 <img src="http://placehold.it/250x300/fbc98a/000000&text={{ item.text  }}" />
+                 <p>  </p>
+              </a>
+            </div> 
+
+    <div class="row">
+    <div class="col-lg-4">
+      &nbsp;
+    </div> 
+    <div class="col-lg-4">
+     &nbsp;
+    </div>
+    <div class="col-lg-4">
+      &nbsp;
+    </div>
+
+
+   <div class="row">
+    <div class="col-lg-4">
+      &nbsp;
+    </div> 
+    <div class="col-lg-4">
+      <a href="#" class="btn">Click Here To Load More </a>
+    </div>
+    <div class="col-lg-4">
+      &nbsp;
+    </div>
+
+
+
+
+    {% endfor %}
+
+
+    {% for item in cat %}
+            <div class="col-lg-4">
+                <h3>{{ item.cat_name }}</h3>
+                 
+                 <p> {{ item.cat_desc  }} </p>
+          
+            </div> 
+
+    {% endfor %}
+
+
+
+
+   </div>
+
+ 
+   </div>
+  </div> <!-- /container -->
+   {% include 'footer.html' %}
+</body>
+</html>
+
