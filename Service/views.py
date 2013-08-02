@@ -5,8 +5,8 @@ from django.contrib import auth
 from django.contrib.auth.models import User
 from django.shortcuts import render, render_to_response
 from content.models import Article
-from product.models import item , category
-
+from product.models import item 
+from product.models import category
 
 def about(request):
 	return render(request , 'about.html')
@@ -26,6 +26,7 @@ def inventory(request):
 	return render(request , 'inventory.html' , {'ite':ite} )
 
 def category(request):
+	from product.models import category
 	cat =category.objects.all()
 	return render(request , 'inventory.html' , {'cat':cat} )
 
