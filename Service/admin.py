@@ -43,6 +43,7 @@ class UserAdminAuthenticationForm(AuthenticationForm):
                 raise forms.ValidationError(message)
         self.check_for_test_cookie()
         return self.cleaned_data
+        
 class UserAdmin(AdminSite):
     # Anything we wish to add or override
      login_form = UserAdminAuthenticationForm
