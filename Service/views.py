@@ -23,4 +23,4 @@ def content(request, content_slug):
 
 def inventory(request):
 	ite =item.objects.all()
-	return render(request , 'inventory.html' , ite )
+	return render(request , 'inventory.html' , {'ite':ite} )
