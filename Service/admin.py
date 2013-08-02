@@ -16,6 +16,7 @@ class UserAdminAuthenticationForm(AuthenticationForm):
                                 " expired.")})
  
     def clean(self):
+    	ERROR_MESSAGE ="This is a error message "
         username = self.cleaned_data.get('username')
         password = self.cleaned_data.get('password')
         message = ERROR_MESSAGE
@@ -43,7 +44,7 @@ class UserAdminAuthenticationForm(AuthenticationForm):
                 raise forms.ValidationError(message)
         self.check_for_test_cookie()
         return self.cleaned_data
-        
+
 class UserAdmin(AdminSite):
     # Anything we wish to add or override
      login_form = UserAdminAuthenticationForm
