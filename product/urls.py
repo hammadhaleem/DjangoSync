@@ -5,12 +5,12 @@ from django.views.generic.base import TemplateView
 
 
 urlpatterns = patterns('',
-   
-    #url(r'^item/edit'),
-   	#url(r'^item/view'),
-    #url(r'^item/analytics'),
-    #url(r'^item/create'),
-    #url(r'^item/delete'),
+    url(r'^item/', index),
+    url(r'^item/edit/(?P<content_slug>\w+)/$',edit),
+   	url(r'^item/view/(?P<content_slug>\w+)/$',view),
+    url(r'^item/analytics',analytics),
+    url(r'^item/create',add),
+    url(r'^item/delete/(?P<content_slug>\w+)/$',remove),
 
 )
 
