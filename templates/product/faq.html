@@ -1,0 +1,39 @@
+{% include 'header.html' %}
+<body>
+   {% include 'nav.html' %}
+   <div class="container">
+   <div class="row">
+      <div class="span9">
+      {% if name  %}
+         <section id="">
+            
+                   <h2> {{ name }}  </h2>
+          
+            
+            <div class="well">
+
+            {% if text  %}
+                    {{ text }}
+            {% else %}
+                    <h1>Opps Are you here in error ? </h1>
+            {% endif %}
+          
+            </div>
+         </section>
+
+       {% endif %}
+      </div>
+      <div class="span3">
+         <section id="">
+            <h2>Side Bar</h2>
+            
+          
+         </section>
+      </div>
+   </div>
+  </div> <!-- /container -->
+   {% include 'footer.html' %}
+</body>
+</html>
+
+

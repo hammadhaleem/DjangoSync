@@ -7,25 +7,26 @@ from content.models import Article
 
 
 def ItemIndex(request):
+	#return a list of all items 
     return render(request , '404.html')
 
 def edit(request, content_slug):
     art = Article.objects.filter(slug=content_slug)
-    return render(request , 'blog.html' , {'name':art[0].name , 'text':art[0].text})
+    return render(request , 'product/blog.html' , {'name':art[0].name , 'text':art[0].text})
 
 def view(request, content_slug):
     art = Article.objects.filter(slug=content_slug)
-    return render(request , 'blog.html' , {'name':art[0].name , 'text':art[0].text})
+    return render(request , 'product/blog.html' , {'name':art[0].name , 'text':art[0].text})
 
 def remove(request, content_slug):
     art = Article.objects.filter(slug=content_slug)
-    return render(request , 'blog.html' , {'name':art[0].name , 'text':art[0].text})
+    return render(request , 'product/blog.html' , {'name':art[0].name , 'text':art[0].text})
 
 def analytics(request):
-   return render(request , 'index.html')
+   return render(request , 'product/index.html')
     
 def add(request):
-   return render(request , 'index.html')
+   return render(request , 'product/index.html')
     
  
  
