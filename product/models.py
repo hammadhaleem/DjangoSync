@@ -1,5 +1,17 @@
 from django.db import models
 
+
+
+class category(models.Model):
+    id=models.AutoField(primary_key=True)
+    cat_name=models.CharField(max_length=200)
+    cat_desc=models.TextField()
+    cat_slug=models.CharField(max_length=200)
+
+    def __unicode__(self):
+        return self.cat_slug
+
+        
 class item(models.Model):
     id=models.AutoField(primary_key=True)
     name=models.CharField(max_length=200)
@@ -19,11 +31,3 @@ class item(models.Model):
         return self.slug
 
 
-class category(models.Model):
-	id=models.AutoField(primary_key=True)
-	cat_name=models.CharField(max_length=200)
-	cat_desc=models.TextField()
-	cat_slug=models.CharField(max_length=200)
-
-	def __unicode__(self):
-		return self.cat_slug
