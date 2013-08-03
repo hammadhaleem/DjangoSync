@@ -9,6 +9,21 @@
 <script type="text/javascript">window.__admin_media_prefix__ = "{% filter escapejs %}{% static "admin/" %}{% endfilter %}";</script>
 {% block extrahead %}{% endblock %}
 {% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE" />{% endblock %}
+
+<!-- Bootstrap core CSS -->
+<link href="http://getbootstrap.com/dist/css/bootstrap.css" rel="stylesheet">
+
+<!-- Documentation extras -->
+<link href="http://getbootstrap.com/assets/css/docs.css" rel="stylesheet">
+<link href="http://getbootstrap.com/assets/css/pygments-manni.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="http://getbootstrap.com/assets/js/html5shiv.js"></script>
+  <script src="http://getbootstrap.com/assets/js/respond.min.js"></script>
+<![endif]-->
+
+
 </head>
 {% load i18n %}
 
@@ -22,14 +37,14 @@
     <div id="header">
         <div id="branding">
         {% block branding %}{% endblock %}
-        </div><!--and user.is_staff  -->
+        </div><!--and   -->
         {% if user.is_active %}
         <div id="user-tools">
             {% trans 'Welcome,' %}
             <strong>{% filter force_escape %}{% firstof user.get_short_name user.get_username %}{% endfilter %}</strong>.
             {% block userlinks %}
                 {% url 'django-admindocs-docroot' as docsroot %}
-                {% if docsroot %}
+                {% if docsroot and user.is_staff %}
                     <a href="{{ docsroot }}">{% trans 'Documentation' %}</a> /
                 {% endif %}
                 {% if user.has_usable_password %}
@@ -74,6 +89,12 @@
     {% block footer %}<div id="footer"></div>{% endblock %}
 </div>
 <!-- END Container -->
+<script src="http://getbootstrap.com/assets/js/jquery.js"></script>
+<script src="http://getbootstrap.com/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<script src="http://getbootstrap.com/assets/js/holder.js"></script>
+<script src="http://getbootstrap.com/assets/js/application.js"></script>
+
 
 </body>
 </html>
