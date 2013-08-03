@@ -9,17 +9,17 @@
 {% if form.errors %}
   <h3><p class="error">Please correct the errors below:</p></h3>
 {% endif %}
-<div class="span12">
-  <div class="span3">&nbsp;&nbsp;
+<div class="col-lg-12">
+  <div class="col-lg-3">&nbsp;&nbsp;
   </div>
-<div class="span6">
+<div class="col-lg-6">
 
 
 <form method="post" action="?next={{ next|default:"/" }}">{% csrf_token %}
 <dl
-<dt><label for="id_username"  class="span4">Username:</label>{% if form.username.errors %} <span class="error">{{ form.username.errors|join:", " }}</span>{% endif %}</dt>
+<dt><label for="id_username"  class="col-lg-4">Username:</label>{% if form.username.errors %} <col-lg- class="error">{{ form.username.errors|join:", " }}</col-lg->{% endif %}</dt>
 <dd>{{ form.username }}</dd>
-<dt><label for="id_password"  class="span4">Password:</label>{% if form.password.errors %} <span class="error">{{ form.password.errors|join:", " }}</span>{% endif %}</dt>
+<dt><label for="id_password"  class="col-lg-4">Password:</label>{% if form.password.errors %} <col-lg- class="error">{{ form.password.errors|join:", " }}</col-lg->{% endif %}</dt>
 <dd>{{ form.password }}</dd>
 <dt><input type="submit" value="Log in" class="btn btn-primary pull-right" /></dt>
 </dl>
