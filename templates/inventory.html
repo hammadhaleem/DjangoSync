@@ -79,12 +79,13 @@
 </style>
  
  <div class="container">
-  Catagories <hr/>
+  
    <div id="wrapper">
+    Catagories <hr/>
   <div id="columns">
     
     {% for item in cat %}
-            <div class="ping">
+            <div class="pin">
                 <h3>{{ item.cat_name }}</h3>
                   <img src="http://placehold.it/75x80/fbc98a/000000&text={{ item.cat_name }}" />
                  <p> {{ item.cat_desc  }} </p>
