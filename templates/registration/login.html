@@ -21,7 +21,7 @@
 <div class="form-group">
 		<label for="id_username"  class="col-lg-4">Username:</label>
 		{% if form.username.errors %}
-			<span class="error"
+			<span class="error">
 				{{ form.username.errors|join:", " }}
 			</span>
 		{% endif %}
