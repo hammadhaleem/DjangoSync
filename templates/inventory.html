@@ -78,7 +78,21 @@
 }
 </style>
  
-<div id="wrapper">
+ <div class="container">
+   <div class="row">
+    
+    {% for item in cat %}
+            <div class="col-lg-3">
+                <h3>{{ item.cat_name }}</h3>
+                 
+                 <p> {{ item.cat_desc  }} </p>
+          
+            </div> 
+
+    {% endfor %}
+     </div>
+
+ <div id="wrapper">
   <div id="columns">
   {% for item in ite %}
             <div class="pin" >
@@ -94,24 +108,6 @@
 </div>
 
 
-  <div class="container">
-   <div class="row">
-    
-    {% for item in cat %}
-            <div class="col-lg-4">
-                <h3>{{ item.cat_name }}</h3>
-                 
-                 <p> {{ item.cat_desc  }} </p>
-          
-            </div> 
-
-    {% endfor %}
-
-
-
-  </div>
-
- 
    </div>
   </div> <!-- /container -->
    {% include 'footer.html' %}
