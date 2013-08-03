@@ -10,9 +10,9 @@
   <h3><p class="error">Please correct the errors below:</p></h3>
 {% endif %}
 <div class="col-lg-12">
-  <div class="col-lg-3">&nbsp;&nbsp;
+  <div class="col-lg-4">&nbsp;&nbsp;
   </div>
-<div class="col-lg-6">
+<div class="col-lg-4">
 
 
 <form method="post" action="?next={{ next|default:"/user/" }}">{% csrf_token %}
@@ -26,12 +26,13 @@
 		<label for="id_password"  class="col-lg-4">Password:</label>{% if form.password.errors %} <col-lg- class="error">{{ form.password.errors|join:", " }}</col-lg->{% endif %}</dt>
 		{{ form.password }}
 </div>
-		<div class="form-group">
-<input type="submit" value="Log in" class="btn btn-primary pull-right" />
-</div>
+	<input type="submit" value="Log in" class="btn btn-primary pull-right" />
+
  </fieldset>
 </form>
 </div>
+ <div class="col-lg-4">&nbsp;&nbsp;
+  </div>
 </div>
 {% endblock %}
 
