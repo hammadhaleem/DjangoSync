@@ -7,7 +7,7 @@ class category(models.Model):
     cat_name=models.CharField(max_length=200)
     cat_desc=models.TextField()
     cat_slug=models.CharField(max_length=200)
-    cat_img=models.CharField(max_length=200)
+    cat_img=models.CharField(max_length=200,default='none')
     def __unicode__(self):
         return self.cat_slug
 
