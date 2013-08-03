@@ -16,13 +16,20 @@
 
 
 <form method="post" action="?next={{ next|default:"/user/" }}">{% csrf_token %}
-<dl
-<dt><label for="id_username"  class="col-lg-4">Username:</label>{% if form.username.errors %} <col-lg- class="error">{{ form.username.errors|join:", " }}</col-lg->{% endif %}</dt>
-<dd>{{ form.username }}</dd>
-<dt><label for="id_password"  class="col-lg-4">Password:</label>{% if form.password.errors %} <col-lg- class="error">{{ form.password.errors|join:", " }}</col-lg->{% endif %}</dt>
-<dd>{{ form.password }}</dd>
-<dt><input type="submit" value="Log in" class="btn btn-primary pull-right" /></dt>
-</dl>
+	  <fieldset>
+
+<div class="form-group">
+		<label for="id_username"  class="col-lg-4">Username:</label>{% if form.username.errors %} <col-lg- class="error">{{ form.username.errors|join:", " }}</col-lg->{% endif %}</dt>
+		{{ form.username }}
+</div>
+<div class="form-group">
+		<label for="id_password"  class="col-lg-4">Password:</label>{% if form.password.errors %} <col-lg- class="error">{{ form.password.errors|join:", " }}</col-lg->{% endif %}</dt>
+		{{ form.password }}
+</div>
+		<div class="form-group">
+<input type="submit" value="Log in" class="btn btn-primary pull-right" />
+</div>
+ </fieldset>
 </form>
 </div>
 </div>
