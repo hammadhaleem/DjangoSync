@@ -79,15 +79,15 @@
 </style>
  
  <div class="container">
+  Catagories <hr/>
    <div id="wrapper">
   <div id="columns">
     
     {% for item in cat %}
-            <div class="col-lg-3">
+            <div class="ping">
                 <h3>{{ item.cat_name }}</h3>
-                 
+                  <img src="http://placehold.it/75x80/fbc98a/000000&text={{ item.cat_name }}" />
                  <p> {{ item.cat_desc  }} </p>
-          
             </div> 
 
     {% endfor %}
@@ -95,6 +95,7 @@
    </div>
 
  <div id="wrapper">
+  Products <hr/>
   <div id="columns">
   {% for item in ite %}
             <div class="pin" >
