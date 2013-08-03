@@ -17,6 +17,7 @@ class UserAdminAuthenticationForm(AuthenticationForm):
                                 " expired.")})
  
     def clean(self):
+    	ERROR_MESSAGE ="This is a error message "
         username = self.cleaned_data.get('username')
         password = self.cleaned_data.get('password')
         message = ERROR_MESSAGE
