@@ -3,6 +3,7 @@ from django.contrib import admin
 from django.contrib.admin.sites import AdminSite
 from django.contrib.auth.forms import AuthenticationForm
 from django.utils.translation import ugettext_lazy
+from django.contrib.auth import authenticate
  
 class UserAdminAuthenticationForm(AuthenticationForm):
     """
@@ -16,7 +17,6 @@ class UserAdminAuthenticationForm(AuthenticationForm):
                                 " expired.")})
  
     def clean(self):
-    	ERROR_MESSAGE ="This is a error message "
         username = self.cleaned_data.get('username')
         password = self.cleaned_data.get('password')
         message = ERROR_MESSAGE
