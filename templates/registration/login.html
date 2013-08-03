@@ -19,11 +19,21 @@
 	  <fieldset>
 
 <div class="form-group">
-		<label for="id_username"  class="col-lg-4">Username:</label>{% if form.username.errors %} <col-lg- class="error">{{ form.username.errors|join:", " }}</col-lg->{% endif %}</dt>
+		<label for="id_username"  class="col-lg-4">Username:</label>
+		{% if form.username.errors %}
+			<span class="error"
+				{{ form.username.errors|join:", " }}
+			</span>
+		{% endif %}
 		{{ form.username }}
 </div>
 <div class="form-group">
-		<label for="id_password"  class="col-lg-4">Password:</label>{% if form.password.errors %} <col-lg- class="error">{{ form.password.errors|join:", " }}</col-lg->{% endif %}</dt>
+		<label for="id_password"  class="col-lg-4">Password:</label>
+		{% if form.password.errors %} 
+				<span class="error">
+					{{ form.password.errors|join:", " }}
+				</span>
+		{% endif %}
 		{{ form.password }}
 </div>
 	<button type="submit" class="btn btn-default">Log In</button>
