@@ -3,7 +3,10 @@
    {% include 'nav.html' %}
 
 <style>
-  
+body {
+  background: url(http://subtlepatterns.com/patterns/scribble_light.png) ;
+}
+
 
 #wrapper {
   width: 90%;
@@ -81,7 +84,7 @@
  <div class="container">
   
    <div id="wrapper">
-    Catagories <hr/>
+    <h3>Catagories</h3> <hr/>
   <div id="columns">
     
     {% for item in cat %}
@@ -96,7 +99,7 @@
    </div>
 
  <div id="wrapper">
-  Products <hr/>
+  <h3>Products </h3><hr/>
   <div id="columns">
   {% for item in ite %}
             <div class="pin" >
