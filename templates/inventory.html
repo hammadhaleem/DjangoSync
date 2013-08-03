@@ -91,8 +91,7 @@ body {
             <div class="pin">
                   <img src="http://placehold.it/75x80/fbc98a/000000&text={{ item.cat_name }}" />
                  <p> 
-                <h3>{{ item.cat_name }}</h3><br/>
-                  {{ item.cat_desc  }} </p>
+                <b>{{ item.cat_name }}<b>{{ item.cat_desc  }} </p>
             </div> 
 
     {% endfor %}
@@ -106,8 +105,7 @@ body {
             <div class="pin" >
               <a href="/item/view/{{item.slug}}">
                  <img src="http://placehold.it/150x300/fbc98a/000000&text={{ item.text  }}" />
-                 <p> 
-                <h3>{{ item.name }}</h3> </p>
+                 <p> <b>{{ item.name }}</b> </p>
               </a>
             </div> 
 
