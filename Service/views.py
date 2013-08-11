@@ -2,7 +2,7 @@ from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.template import RequestContext
 from django.contrib import auth
 from django.views.generic import ListView, DetailView
-from .models import Link, UserProfile
+
 from .forms import UserProfileForm
 
 from django.contrib.auth.models import User
