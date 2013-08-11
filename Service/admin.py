@@ -8,7 +8,7 @@ from .models import *
 
 
 from django.contrib import admin
-from .models import Link, Vote, UserProfile
+from .models import UserProfile
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth import get_user_model
 
