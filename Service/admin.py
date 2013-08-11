@@ -6,13 +6,7 @@ from django.utils.translation import ugettext_lazy
 from django.contrib.auth import authenticate
 
 
-class LinkAdmin(admin.ModelAdmin):
-    pass
-admin.site.register(Link, LinkAdmin)
 
-class VoteAdmin(admin.ModelAdmin):
-    pass
-admin.site.register(Vote, VoteAdmin)
 
 class UserProfileInline(admin.StackedInline):
     model = UserProfile
