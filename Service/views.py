@@ -29,13 +29,6 @@ def inventory(request):
 	return render(request , 'inventory.html' , {'ite':ite ,'cat':cat } )
 
 
-
-
-class UserProfileForm(forms.ModelForm):
-    class Meta:
-        model = UserProfile
-        exclude = ("user",)
-        
 class UserProfileDetailView(DetailView):
     model = get_user_model()
     slug_field = "username"

@@ -8,6 +8,7 @@ from Service.admin import user_admin_site
 
 from Service.views import UserProfileDetailView
 from Service.views import UserProfileEditView
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
