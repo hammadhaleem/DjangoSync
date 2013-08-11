@@ -7,6 +7,12 @@ from django.contrib.auth import authenticate
 from .models import * 
 
 
+from django.contrib import admin
+from .models import Link, Vote, UserProfile
+from django.contrib.auth.admin import UserAdmin
+from django.contrib.auth import get_user_model
+
+
 
 class UserProfileInline(admin.StackedInline):
     model = UserProfile
