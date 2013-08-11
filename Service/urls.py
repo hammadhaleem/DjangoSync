@@ -4,6 +4,10 @@ from content.views import *
 from product.views import *
 from django.contrib import admin
 from Service.admin import user_admin_site
+
+
+from Service.views import UserProfileDetailView
+from Service.views import UserProfileEditView
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -26,6 +30,13 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
     url(r'^user/', include(user_admin_site.urls)),
+
+
+
+    url(r"^users/(?P<slug>\w+)/$", UserProfileDetailView.as_view()),
+    url(r"edit_profile/$", auth(UserProfileEditView.as_view())),
+
+
     #url(r'^', include('myapp.urls')),
 )
 
