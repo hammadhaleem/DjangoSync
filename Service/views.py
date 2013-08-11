@@ -16,6 +16,15 @@ from content.models import *
 from product.models import *
 
 
+from django.views.generic import ListView, DetailView
+from .models import UserProfile
+from .forms import UserProfileForm
+from django.contrib.auth import get_user_model
+from django.views.generic.edit import UpdateView
+from django.core.urlresolvers import reverse
+
+
+
 def about(request):
 	return render(request , 'about.html')
 
