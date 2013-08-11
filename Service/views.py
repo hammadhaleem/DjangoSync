@@ -15,33 +15,17 @@ from django.core.urlresolvers import reverse
 from content.models import *
 from product.models import *
 
-
 from django.views.generic import ListView, DetailView
-from .models import UserProfile
+from .models import Link, UserProfile
 from .forms import UserProfileForm
 from django.contrib.auth import get_user_model
 from django.views.generic.edit import UpdateView
 from django.core.urlresolvers import reverse
 
-
-
-def about(request):
-	return render(request , 'about.html')
-
-def index(request):
-    return render(request , 'index.html')
-    
-def faq (request) :
-	return render(request , 'faq.html' )
-
-def content(request, content_slug):
-    art = Article.objects.filter(slug=content_slug)
-    return render(request , 'blog.html' , {'name':art[0].name , 'text':art[0].text})
-
-def inventory(request):
-	ite =item.objects.all()
-	cat =category.objects.all()
-	return render(request , 'inventory.html' , {'ite':ite ,'cat':cat } )
+class LinkListView(ListView):
+    model = Link
+    queryset = Link.with_votes.all()
+    paginate_by = 5
 
 
 class UserProfileDetailView(DetailView):
@@ -64,3 +48,21 @@ class UserProfileEditView(UpdateView):
 
     def get_success_url(self):
         return reverse("profile", kwargs={"slug": self.request.user})
+
+def about(request):
+	return render(request , 'about.html')
+
+def index(request):
+    return render(request , 'index.html')
+    
+def faq (request) :
+	return render(request , 'faq.html' )
+
+def content(request, content_slug):
+    art = Article.objects.filter(slug=content_slug)
+    return render(request , 'blog.html' , {'name':art[0].name , 'text':art[0].text})
+
+def inventory(request):
+	ite =item.objects.all()
+	cat =category.objects.all()
+	return render(request , 'inventory.html' , {'ite':ite ,'cat':cat } )
