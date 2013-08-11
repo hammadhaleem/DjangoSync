@@ -1,10 +1,16 @@
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.template import RequestContext
 from django.contrib import auth
+from django.views.generic import ListView, DetailView
+from .models import Link, UserProfile
+from .forms import UserProfileForm
+
 from django.contrib.auth.models import User
 from django.shortcuts import render, render_to_response
 from django import forms
 from .models import UserProfile
+from django.views.generic.edit import UpdateView
+from django.core.urlresolvers import reverse
 
 from content.models import *
 from product.models import *
