@@ -35,7 +35,7 @@ urlpatterns = patterns('',
 
 
     url(r"^users/(?P<slug>\w+)/$", UserProfileDetailView.as_view()),
-    url(r"^edit_profile/$", auth(UserProfileEditView.as_view()))
+    url(r"edit_profile/$", auth(UserProfileEditView.as_view()))
     #url(r'^', include('myapp.urls')),
 )
 
