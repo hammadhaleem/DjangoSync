@@ -6,9 +6,6 @@ from django.contrib import admin
 from Service.admin import user_admin_site
 
 
-from .views import UserProfileDetailView
-from .views import UserProfileEditView
-
 admin.autodiscover()
 
 urlpatterns = patterns('',
