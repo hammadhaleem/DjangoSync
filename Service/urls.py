@@ -1,9 +1,11 @@
 from django.conf.urls import patterns, include, url
-from service.views import *
+from django.contrib import admin
+
 from content.views import *
 from product.views import *
-from django.contrib import admin
-from Service.admin import user_admin_site
+
+from .admin import user_admin_site
+from .views import *
 
 
 admin.autodiscover()
