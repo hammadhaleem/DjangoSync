@@ -6,20 +6,8 @@ from django.utils.translation import ugettext_lazy
 from django.contrib.auth import authenticate
 from .models import * 
 
-
-from django.contrib import admin
-from .models import UserProfile
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth import get_user_model
-
-
-
-class UserProfileInline(admin.StackedInline):
-    model = UserProfile
-    can_delete = False
-
-class UserProfileAdmin(UserAdmin):
-    inlines=(UserProfileInline, )
 
 
 
@@ -77,8 +65,6 @@ class UserAdmin(AdminSite):
 
  
 user_admin_site = UserAdmin(name='usersadmin')
-admin.site.unregister(get_user_model())
-admin.site.register(get_user_model(), UserProfileAdmin)
 
 # Run user_admin_site.register() for each model we wish to register
 # for our admin interface for users
