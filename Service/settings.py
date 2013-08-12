@@ -142,6 +142,7 @@ INSTALLED_APPS = (
     'product',
     'discussion',
     'registration',
+    'custom_profile',
 )
 
 # A sample logging configuration. The only tangible logging
