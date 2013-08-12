@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-from Service.views import *
+from service.views import *
 from content.views import *
 from product.views import *
 from django.contrib import admin
