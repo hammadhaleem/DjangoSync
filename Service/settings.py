@@ -143,7 +143,6 @@ INSTALLED_APPS = (
     'product',
     'discussion',
     'registration',
-    'custom_profile',
     'profiles',
 )
 
