@@ -8,6 +8,7 @@ from django.core.urlresolvers import reverse
 from django.views.generic import ListView, DetailView
 from django.contrib.auth import get_user_model
 
+
 from content.models import *
 from product.models import *
 

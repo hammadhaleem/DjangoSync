@@ -1,4 +1,4 @@
-# Django settings for service project.
+# Django settings for Service project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -103,8 +103,8 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'service.urls'
-GRAPPELLI_INDEX_DASHBOARD = 'service.dashboard.CustomIndexDashboard'
+ROOT_URLCONF = 'Service.urls'
+GRAPPELLI_INDEX_DASHBOARD = 'Service.dashboard.CustomIndexDashboard'
 ACCOUNT_ACTIVATION_DAYS = 100 
 EMAIL_PORT = 1025
 EMAIL_HOST_USER = ""
@@ -112,7 +112,7 @@ EMAIL_HOST_PASSWORD = ""
 EMAIL_USE_TLS = False
 DEFAULT_FROM_EMAIL = 'testing@example.com'
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'service.wsgi.application'
+WSGI_APPLICATION = 'Service.wsgi.application'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -120,7 +120,7 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
     SITE_ROOT + "templates" ,
 )
-AUTH_PROFILE_MODULE = 'service.userProfile'
+AUTH_PROFILE_MODULE = 'profiles.userProfile'
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     "django.contrib.auth.context_processors.auth",
