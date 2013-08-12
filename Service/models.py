@@ -4,5 +4,5 @@ from django.contrib.auth.models import User
 class UserProfile(models.Model):
     url = models.URLField()
     home_address = models.TextField()
-    phone_numer = models.PhoneNumberField()
+    phone_numer = models.TextField()
     user = models.ForeignKey(User, unique=True)
