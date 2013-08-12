@@ -32,7 +32,7 @@ class Vote(models.Model):
 class UserProfile(models.Model):
     user = models.OneToOneField(User, unique=True)
     # Extra attributes
-    bio = models.TextField(null=True)
+    bio = models.TextField()
 
     def __unicode__(self):
         return "%s's profile" % self.user
