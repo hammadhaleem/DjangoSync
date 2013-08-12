@@ -1,4 +1,4 @@
-# Django settings for Service project.
+# Django settings for service project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -13,7 +13,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'Service',                      # Or path to database file if using sqlite3.
+        'NAME': 'service',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': 'root',
         'PASSWORD': 'kgggdkp2692',
@@ -103,8 +103,8 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'Service.urls'
-GRAPPELLI_INDEX_DASHBOARD = 'Service.dashboard.CustomIndexDashboard'
+ROOT_URLCONF = 'service.urls'
+GRAPPELLI_INDEX_DASHBOARD = 'service.dashboard.CustomIndexDashboard'
 ACCOUNT_ACTIVATION_DAYS = 100 
 EMAIL_PORT = 1025
 EMAIL_HOST_USER = ""
@@ -112,7 +112,7 @@ EMAIL_HOST_PASSWORD = ""
 EMAIL_USE_TLS = False
 DEFAULT_FROM_EMAIL = 'testing@example.com'
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'Service.wsgi.application'
+WSGI_APPLICATION = 'service.wsgi.application'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
