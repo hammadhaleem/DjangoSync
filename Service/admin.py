@@ -4,7 +4,13 @@ from django.contrib.admin.sites import AdminSite
 from django.contrib.auth.forms import AuthenticationForm
 from django.utils.translation import ugettext_lazy
 from django.contrib.auth import authenticate
- 
+from .models import * 
+
+from django.contrib.auth.admin import UserAdmin
+from django.contrib.auth import get_user_model
+
+
+
 class UserAdminAuthenticationForm(AuthenticationForm):
     """
     Same as Django's AdminAuthenticationForm but allows to login
@@ -59,6 +65,7 @@ class UserAdmin(AdminSite):
 
  
 user_admin_site = UserAdmin(name='usersadmin')
+
 # Run user_admin_site.register() for each model we wish to register
 # for our admin interface for users
  

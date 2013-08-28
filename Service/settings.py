@@ -120,6 +120,7 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
     SITE_ROOT + "templates" ,
 )
+AUTH_PROFILE_MODULE = 'profiles.userProfile'
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     "django.contrib.auth.context_processors.auth",
@@ -142,6 +143,7 @@ INSTALLED_APPS = (
     'product',
     'discussion',
     'registration',
+    'profiles',
 )
 
 # A sample logging configuration. The only tangible logging
